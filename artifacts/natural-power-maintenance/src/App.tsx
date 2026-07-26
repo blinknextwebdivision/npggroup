@@ -1,13 +1,13 @@
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { Toaster } from '@/components/ui/toaster';
 import { TooltipProvider } from '@/components/ui/tooltip';
-import { ArrowUpRight, Check, ChevronDown, Clock3, Copy, Mail, Menu, Minus, Phone, Wind, X } from 'lucide-react';
+import { ArrowUpRight, Check, ChevronDown, Clock3, Copy, Mail, Menu, Minus, Wind, X } from 'lucide-react';
 import { useState } from 'react';
 import { Route, Switch, Router as WouterRouter } from 'wouter';
 import NotFound from '@/pages/not-found';
 
 const queryClient = new QueryClient();
-const emailAddress = 'hello@naturalpowergroup.com';
+const emailAddress = 'info@npginfo.com';
 
 function Mark({ light = false }: { light?: boolean }) {
   return (
@@ -93,7 +93,7 @@ function Home() {
                 {item.label}
               </a>
             ))}
-            <a href="mailto:hello@naturalpowergroup.com" className="focus-ring flex items-center gap-2 rounded-full border border-[#d9be7c]/60 px-4 py-2.5 text-[12px] font-bold text-[#f2d28b] transition-colors hover:bg-[#d9be7c] hover:text-[#214d3e]" data-testid="link-header-email">
+            <a href={`mailto:${emailAddress}`} className="focus-ring flex items-center gap-2 rounded-full border border-[#d9be7c]/60 px-4 py-2.5 text-[12px] font-bold text-[#f2d28b] transition-colors hover:bg-[#d9be7c] hover:text-[#214d3e]" data-testid="link-header-email">
               Contact team <ArrowUpRight size={14} />
             </a>
           </nav>
@@ -106,7 +106,7 @@ function Home() {
             {navItems.map((item) => (
               <a key={item.href} href={item.href} onClick={() => setMenuOpen(false)} className="focus-ring border-b border-[#d9be7c]/20 pb-3 text-sm font-semibold text-[#f8f3e8]" data-testid={`link-mobile-${item.label.toLowerCase().replace(' ', '-')}`}>{item.label}</a>
             ))}
-            <a href="mailto:hello@naturalpowergroup.com" className="focus-ring text-sm font-semibold text-[#e5b85e]" data-testid="link-mobile-email">Email the team <ArrowUpRight size={14} className="ml-1 inline" /></a>
+            <a href={`mailto:${emailAddress}`} className="focus-ring text-sm font-semibold text-[#e5b85e]" data-testid="link-mobile-email">Email the team <ArrowUpRight size={14} className="ml-1 inline" /></a>
           </nav>
         )}
         <div className="relative z-10 mx-auto grid max-w-7xl items-center gap-8 px-6 pb-16 pt-20 md:pb-28 md:pt-28 lg:grid-cols-[1.05fr_.95fr] lg:px-12">
@@ -181,7 +181,7 @@ function Home() {
           <div>
             <p className="mono text-[10px] font-bold uppercase tracking-[.18em] text-[#6e7e61]">While we make the finishing touches</p>
             <h2 className="display mt-5 max-w-2xl text-[clamp(2.9rem,6vw,5.8rem)] leading-[.94] tracking-[-.06em]">Have a project in mind?</h2>
-            <p className="mt-6 max-w-lg text-[16px] leading-7 text-[#5d7466]">We would still love to hear from you. Our team is available for conversations about partnerships, projects, and the future of energy.</p>
+            <p className="mt-6 max-w-lg text-[16px] leading-7 text-[#5d7466]">We would still love to hear from you. Based in Lucknow, our team is available for conversations about partnerships, projects, and the future of energy.</p>
           </div>
           <div className="flex flex-col items-start gap-4 lg:items-end">
             <a href={`mailto:${emailAddress}`} className="focus-ring group flex items-center gap-3 text-left text-[18px] font-bold text-[#214d3e] hover:text-[#a16e23] md:text-right" data-testid="link-contact-email">
@@ -198,8 +198,8 @@ function Home() {
         <div className="mx-auto flex max-w-7xl flex-col gap-7 sm:flex-row sm:items-center sm:justify-between">
           <Mark light />
           <div className="flex flex-wrap items-center gap-x-6 gap-y-2 text-[11px] text-[#a7bba9]">
-            <a href="mailto:hello@naturalpowergroup.com" className="focus-ring flex items-center gap-2 hover:text-[#e1b45a]" data-testid="link-footer-email"><Mail size={13} /> Email</a>
-            <a href="tel:+18005550184" className="focus-ring flex items-center gap-2 hover:text-[#e1b45a]" data-testid="link-footer-phone"><Phone size={13} /> +1 800 555 0184</a>
+            <a href={`mailto:${emailAddress}`} className="focus-ring flex items-center gap-2 hover:text-[#e1b45a]" data-testid="link-footer-email"><Mail size={13} /> Email</a>
+            <span className="text-[#779381]">Based in Lucknow</span>
             <span className="text-[#779381]">© {new Date().getFullYear()} Natural Power Group</span>
           </div>
         </div>
