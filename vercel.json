@@ -3,7 +3,7 @@
   "framework": "vite",
   "installCommand": "pnpm install --frozen-lockfile",
   "buildCommand": "pnpm --filter @workspace/natural-power-maintenance run build",
-  "outputDirectory": "artifacts/natural-power-maintenance/dist/public",
+  "outputDirectory": "artifacts/natural-power-maintenance/dist",
   "routes": [
     {
       "handle": "filesystem"

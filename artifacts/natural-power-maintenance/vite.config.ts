@@ -29,7 +29,9 @@ export default defineConfig({
   },
   root: path.resolve(import.meta.dirname),
   build: {
-    outDir: path.resolve(import.meta.dirname, 'dist/public'),
+    // Vercel's Vite preset expects the build output in a standard `dist` folder.
+    // Keeping this conventional avoids outputDirectory detection issues.
+    outDir: path.resolve(import.meta.dirname, 'dist'),
     emptyOutDir: true,
   },
   server: {
