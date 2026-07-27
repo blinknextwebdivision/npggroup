@@ -2,7 +2,7 @@
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "framework": "vite",
   "installCommand": "pnpm install --frozen-lockfile",
-  "buildCommand": "sh -c 'pnpm --filter @workspace/natural-power-maintenance run build && if [ -d artifacts/natural-power-maintenance/dist ]; then rm -rf dist && cp -R artifacts/natural-power-maintenance/dist dist; elif [ -d dist ]; then :; else echo \"Expected build output not found\" >&2; exit 1; fi'",
+  "buildCommand": "bash scripts/vercel-build.sh",
   "outputDirectory": "dist",
   "routes": [
     {
