@@ -2,8 +2,8 @@
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "framework": "vite",
   "installCommand": "pnpm install --frozen-lockfile",
-  "buildCommand": "pnpm --filter @workspace/natural-power-maintenance run build",
-  "outputDirectory": "artifacts/natural-power-maintenance/dist",
+  "buildCommand": "pnpm --filter @workspace/natural-power-maintenance run build && rm -rf dist && cp -R artifacts/natural-power-maintenance/dist dist",
+  "outputDirectory": "dist",
   "routes": [
     {
       "handle": "filesystem"

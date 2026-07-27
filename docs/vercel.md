@@ -5,8 +5,8 @@ This repository is prepared for deploying the `natural-power-maintenance` fronte
 ## What Vercel Builds
 
 - Install command: `pnpm install --frozen-lockfile`
-- Build command: `pnpm --filter @workspace/natural-power-maintenance run build`
-- Output directory: `artifacts/natural-power-maintenance/dist`
+- Build command: `pnpm --filter @workspace/natural-power-maintenance run build && rm -rf dist && cp -R artifacts/natural-power-maintenance/dist dist`
+- Output directory: `dist`
 
 These values are defined in [`vercel.json`](file:///Users/deivyanshsingh/Downloads/Power-Group-Status/vercel.json).
 
