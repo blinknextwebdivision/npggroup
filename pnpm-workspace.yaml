@@ -61,6 +61,7 @@ allowBuilds:
   esbuild: false
 
 overrides:
+  brace-expansion: 5.0.8
   esbuild: npm:esbuild-wasm@0.27.3
   "esbuild>@esbuild/darwin-arm64": "-"
   "esbuild>@esbuild/darwin-x64": "-"
@@ -139,3 +140,4 @@ overrides:
   "@expo/ngrok-bin>@expo/ngrok-bin-win32-ia32": "-"
   "@expo/ngrok-bin>@expo/ngrok-bin-win32-x64": "-"
   "@esbuild-kit/esm-loader": "npm:tsx@^4.21.0"
+  js-yaml: 4.3.0
